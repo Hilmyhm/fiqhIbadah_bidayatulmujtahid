@@ -1,0 +1,267 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>فقه العبادات ١ — منصة الدراسة التفاعلية</title>
+    <meta
+      name="description"
+      content="منصة تعليمية تفاعلية لدراسة مقرر فقه العبادات ١ (فقه 3200) وفق منهج الفقه المقارن مع خريطة المقرر، ومراحل دراسة المسألة، والمقتطفات النصية من المقرر، وبطاقات الاستذكار، والاختبارات الذكية."
+    />
+    <meta property="og:title" content="فقه العبادات ١ — منصة الدراسة التفاعلية" />
+    <meta
+      property="og:description"
+      content="منصة تعليمية تفاعلية لدراسة مقرر فقه العبادات ١ (فقه 3200) وفق منهج الفقه المقارن مع خريطة المقرر، ومراحل دراسة المسألة، والمقتطفات النصية من المقرر، وبطاقات الاستذكار، والاختبارات الذكية."
+    />
+    <meta property="og:type" content="website" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Amiri:ital,wght@0,400;0,700;1,400&family=Cairo:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div id="app" class="app-shell">
+      <!-- الشريط العلوي الموحد -->
+      <header class="topbar" id="topbar">
+        <div class="topbar-inner">
+          <div class="brand-group" id="brand-home-btn" role="button" tabindex="0" aria-label="العودة إلى خريطة المقرر">
+            <div class="brand-mark" aria-hidden="true">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+                <path d="M8 7h8" />
+                <path d="M8 11h6" />
+              </svg>
+            </div>
+            <div class="brand-text">
+              <span class="brand-title">فقه العبادات ١</span>
+              <span class="brand-subtitle">مقرر فقه 3200 · دراسة مقارنة (ص ١ – ٣٤٩)</span>
+            </div>
+          </div>
+
+          <nav class="topbar-nav" aria-label="التنقل الرئيسي">
+            <button type="button" class="nav-btn is-active" data-nav="map" id="nav-map">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polygon points="3 6 9 3 15 6 21 3 21 18 15 21 9 18 3 21" />
+                <line x1="9" y1="3" x2="9" y2="18" />
+                <line x1="15" y1="6" x2="15" y2="21" />
+              </svg>
+              <span>خريطة المقرر</span>
+            </button>
+
+            <button type="button" class="nav-btn" data-nav="chapter" id="nav-chapter">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z" />
+                <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z" />
+              </svg>
+              <span>لوحة الباب</span>
+            </button>
+
+            <button type="button" class="nav-btn" data-nav="flashcards" id="nav-flashcards">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="6" width="16" height="14" rx="2" />
+                <path d="M6 2h14a2 2 0 0 1 2 2v12" />
+              </svg>
+              <span>بطاقات الاستذكار</span>
+            </button>
+
+            <button type="button" class="nav-btn" data-nav="quiz" id="nav-quiz">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10" />
+                <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3" />
+                <line x1="12" y1="17" x2="12.01" y2="17" />
+              </svg>
+              <span>الاختبار الذكي</span>
+            </button>
+
+            <button type="button" class="nav-btn nav-btn-slides" data-nav="slides" id="nav-slides">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <rect x="2" y="3" width="20" height="14" rx="2" />
+                <line x1="8" y1="21" x2="16" y2="21" />
+                <line x1="12" y1="17" x2="12" y2="21" />
+              </svg>
+              <span>عرض الشرائح التفاعلي</span>
+            </button>
+          </nav>
+
+          <div class="topbar-actions">
+            <button type="button" class="icon-btn" id="toc-drawer-btn" title="فهرس الدروس" aria-label="فتح فهرس الدروس">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="8" y1="6" x2="21" y2="6" />
+                <line x1="8" y1="12" x2="21" y2="12" />
+                <line x1="8" y1="18" x2="21" y2="18" />
+                <line x1="3" y1="6" x2="3.01" y2="6" />
+                <line x1="3" y1="12" x2="3.01" y2="12" />
+                <line x1="3" y1="18" x2="3.01" y2="18" />
+              </svg>
+            </button>
+
+            <button type="button" class="icon-btn" id="theme-toggle-btn" title="تبديل الوضع الليلي" aria-label="تبديل الوضع الليلي أو النهاري">
+              <svg class="icon-moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z" />
+              </svg>
+              <svg class="icon-sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="5" />
+                <line x1="12" y1="1" x2="12" y2="3" />
+                <line x1="12" y1="21" x2="12" y2="23" />
+                <line x1="4.22" y1="4.22" x2="5.64" y2="5.64" />
+                <line x1="18.36" y1="18.36" x2="19.78" y2="19.78" />
+                <line x1="1" y1="12" x2="3" y2="12" />
+                <line x1="21" y1="12" x2="23" y2="12" />
+                <line x1="4.22" y1="19.78" x2="5.64" y2="18.36" />
+                <line x1="18.36" y1="5.64" x2="19.78" y2="4.22" />
+              </svg>
+            </button>
+
+            <button type="button" class="primary-pill-btn" id="study-board-btn">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+              </svg>
+              <span>لوحة المذاكرة</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- الشريط الفرعي للمسار والتقدم -->
+        <div class="subbar" id="subbar">
+          <div class="subbar-inner">
+            <div class="subbar-right">
+              <button type="button" class="subbar-toc-trigger" id="subbar-toc-btn">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20" />
+                </svg>
+                <span>فهرس الدروس</span>
+              </button>
+              <span class="subbar-sep">|</span>
+              <span class="subbar-breadcrumb" id="subbar-breadcrumb">خريطة المقرر الكاملة · ١٦ درساً (كتاب الطهارة وكتاب الصلاة)</span>
+            </div>
+
+            <div class="subbar-left" id="subbar-progress-wrap">
+              <span class="subbar-progress-label" id="subbar-progress-label">الدرسان ١ و ٢ متاحان بالكامل</span>
+              <div class="subbar-progress-track" aria-hidden="true">
+                <div class="subbar-progress-fill" id="subbar-progress-fill"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+
+      <!-- حاوية Reveal.js الرئيسية للتنقل السلس بين المشاهد -->
+      <main class="reveal-app-shell">
+        <div class="reveal" id="main-reveal">
+          <div class="slides">
+            <!-- الشريحة 0: خريطة المقرر التفاعلية (Candy Crush-style SVG Map) -->
+            <section id="view-map" data-transition="fade">
+              <div class="view-container map-view-container" id="map-view-root"></div>
+            </section>
+
+            <!-- الشريحة 1: عرض الباب (المقدمة + أزرار التقييم + قائمة المسائل) -->
+            <section id="view-chapter" data-transition="slide">
+              <div class="view-container" id="chapter-view-root"></div>
+            </section>
+
+            <!-- الشريحة 2: تفاصيل المسألة وفق الإطار التخطيطي (٥ مراحل + عرض الأدلة) -->
+            <section id="view-problem" data-transition="slide">
+              <div class="view-container problem-view-container" id="problem-view-root"></div>
+            </section>
+
+            <!-- الشريحة 3: وضع بطاقات الاستذكار للباب -->
+            <section id="view-flashcards" data-transition="fade">
+              <div class="view-container" id="flashcards-view-root"></div>
+            </section>
+
+            <!-- الشريحة 4: وضع الاختبار الذكي للباب -->
+            <section id="view-quiz" data-transition="fade">
+              <div class="view-container" id="quiz-view-root"></div>
+            </section>
+
+            <!-- الشريحة 5: وضع عرض الشرائح التفاعلي للباب (Reveal.js Slide Deck) -->
+            <section id="view-slides" data-transition="slide">
+              <div class="view-container" id="slides-view-root"></div>
+            </section>
+          </div>
+        </div>
+      </main>
+
+      <!-- نافذة المقتطف النصي من الـ PDF -->
+      <div class="modal-backdrop" id="quote-modal" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title" hidden>
+        <div class="modal-card quote-modal-card">
+          <div class="modal-header">
+            <div class="modal-meta-wrap">
+              <span class="modal-source-label">النص المرجعي من المقرر</span>
+              <span class="modal-page-tag" id="quote-modal-page">ص ١٠</span>
+            </div>
+            <button type="button" class="modal-close-btn" id="quote-modal-close" aria-label="إغلاق النافذة">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+          <h3 class="modal-title" id="quote-modal-title">عنوان المقتطف</h3>
+          <div class="quote-scroll-body">
+            <blockquote class="verbatim-quote" id="quote-modal-text"></blockquote>
+          </div>
+          <div class="modal-footer">
+            <span class="modal-book-note">المصدر: مقرر فقه العبادات ١ (فقه 3200) · النص الموثق حسب ترقيم الصفحات</span>
+            <button type="button" class="btn-dark" id="quote-modal-ok">إغلاق</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- نافذة معاينة الدروس القادمة (٣ - ١٦) -->
+      <div class="modal-backdrop" id="upcoming-modal" role="dialog" aria-modal="true" aria-labelledby="upcoming-modal-title" hidden>
+        <div class="modal-card upcoming-modal-card">
+          <div class="modal-header">
+            <div class="modal-meta-wrap">
+              <span class="modal-source-label" id="upcoming-modal-unit">كتاب الطهارة</span>
+              <span class="modal-page-tag" id="upcoming-modal-pages">ص ٥٢ – ٧٤</span>
+            </div>
+            <button type="button" class="modal-close-btn" id="upcoming-modal-close" aria-label="إغلاق النافذة">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+          <h3 class="modal-title" id="upcoming-modal-title">عنوان الدرس</h3>
+          <p class="upcoming-summary" id="upcoming-modal-summary"></p>
+          <div class="upcoming-info-box">
+            <strong>نطاق المسائل في المقرر:</strong>
+            <span id="upcoming-modal-range"></span>
+            <p class="upcoming-note">
+              هذا الدرس مُدرج في خريطة المنهج الكاملة حسب فهرس الكتاب، وقد خُصصت هذه المرحلة التأسيسية لإكمال محتوى الدرس الأول والدرس الثاني بالكامل مع كامل المسائل والبطاقات والاختبارات.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn-outline" id="upcoming-goto-ch1">فتح الدرس الأول</button>
+            <button type="button" class="btn-dark" id="upcoming-modal-ok">العودة إلى الخريطة</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- درج فهرس الدروس الجانبي -->
+      <div class="drawer-backdrop" id="toc-drawer" hidden>
+        <aside class="toc-drawer-panel" role="dialog" aria-modal="true" aria-label="فهرس دروس المقرر">
+          <div class="drawer-header">
+            <div>
+              <h3>فهرس دروس المقرر</h3>
+              <p>١٦ درساً في كتابَي الطهارة والصلاة</p>
+            </div>
+            <button type="button" class="modal-close-btn" id="toc-drawer-close" aria-label="إغلاق الفهرس">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="18" y1="6" x2="6" y2="18" />
+                <line x1="6" y1="6" x2="18" y2="18" />
+              </svg>
+            </button>
+          </div>
+          <div class="drawer-list" id="toc-drawer-list"></div>
+        </aside>
+      </div>
+    </div>
+
+    <script type="module" src="/app.js"></script>
+  </body>
+</html>
